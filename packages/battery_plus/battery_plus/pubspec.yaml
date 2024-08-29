@@ -1,0 +1,49 @@
+name: battery_plus
+description: Flutter plugin for accessing information about the battery state(full, charging, discharging).
+version: 6.0.3
+homepage: https://github.com/mohamadsaleh82/plus_plugins
+repository: https://github.com/mohamadsaleh82/plus_plugins/tree/main/packages/battery_plus/battery_plus
+issue_tracker: https://github.com/mohamadsaleh82/plus_plugins/labels/battery_plus
+topics:
+  - battery
+  - utils
+
+flutter:
+  plugin:
+    platforms:
+      android:
+        package: dev.mohamadsaleh82.plus.battery
+        pluginClass: BatteryPlusPlugin
+      ios:
+        pluginClass: FPPBatteryPlusPlugin
+      linux:
+        dartPluginClass: BatteryPlusLinuxPlugin
+      macos:
+        pluginClass: BatteryPlusMacosPlugin
+      web:
+        pluginClass: BatteryPlusWebPlugin
+        fileName: src/battery_plus_web.dart
+      windows:
+        pluginClass: BatteryPlusWindowsPlugin
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_web_plugins:
+    sdk: flutter
+  battery_plus_platform_interface: ^2.0.1
+  meta: ^1.8.0
+  upower: ^0.7.0
+  web: ^1.0.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  async: ^2.10.0
+  flutter_lints: ^4.0.0
+  mockito: ^5.4.0
+  plugin_platform_interface: ^2.1.4
+
+environment:
+  sdk: ">=3.3.0 <4.0.0"
+  flutter: ">=3.19.0"
